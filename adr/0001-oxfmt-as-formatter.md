@@ -33,8 +33,9 @@ trailing commas, LF).
 
 - oxfmt is pre-1.0. Known rough edge (0.66): not one-pass idempotent on
   functions with multi-line object-type return annotations; the `format`
-  script runs it twice to reach the fixed point. Delete the second run once
-  upstream converges in one pass.
+  script runs it twice to reach the fixed point. Tracked upstream:
+  [oxc-project/oxc#26240](https://github.com/oxc-project/oxc/issues/26240).
+  Delete the second run once upstream converges in one pass.
 - Tests must never pin line layout (see conventions.md).
 
 ## Revisit when

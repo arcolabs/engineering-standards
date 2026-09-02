@@ -31,9 +31,11 @@ repo root; workspaces never carry their own lockfile.
 
 `format` runs oxfmt twice on purpose: oxfmt (as of 0.66) is not one-pass
 idempotent on functions with multi-line object-type return annotations —
-pass one re-wraps, pass two reaches the fixed point. A single-pass format
-followed by CI `format:check` can flap on that pattern. Recheck when
-upgrading oxfmt; delete the second run once upstream is idempotent.
+pass one re-wraps, pass two reaches the fixed point
+([oxc-project/oxc#26240](https://github.com/oxc-project/oxc/issues/26240)).
+A single-pass format followed by CI `format:check` can flap on that
+pattern. Recheck when upgrading oxfmt; delete the second run once upstream
+is idempotent.
 
 ## CI gates
 
