@@ -44,6 +44,22 @@ Every PR and every push to main runs, as separate jobs: `format:check`,
 them. Gates are deterministic and hermetic: no network-dependent checks in
 the required path.
 
+Two constraints on the gate list itself:
+
+- **Budget:** the full gate set for one change must return feedback in under
+  ten minutes, locally and on CI. Over budget means pruning the suite, not
+  raising the budget.
+- **Integrity:** a gate named in a `ci` script chain and a job CI actually runs
+  are different facts. When they disagree, the workflow is the truth and the
+  script line is drift (found 2026-09-16 in an adopting repo: `lint` in the
+  `ci` script, no lint job). Fix whichever is wrong in the same change that
+  notices it.
+
+No browser automation belongs in this baseline. A repo missing any gate above
+has an unmet L1 obligation, and closing it precedes any stronger verification
+tier: a browser suite in a repo without a working CI job gates nothing.
+Evidence routing and test-scope judgment are L2 — see `../conventions.md`.
+
 ## Generated files
 
 Generated artifacts (route trees, ORM output, lockfiles) go in the
