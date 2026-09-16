@@ -71,11 +71,11 @@ Route on the first rule that matches:
 Rules 1–4 answer "what do I owe". They are ordered by blast radius, not by
 effort, and an agent should classify the diff, not the ticket.
 
-Ownership boundary: this entry owns **evidence type** (what counts as verified)
-and speaks to every agent working in a TypeScript product repo. **Cadence** (when
-to spend a verification pass during an in-progress slice, and batching many small
-edits into one gate run) is a working rhythm owned elsewhere and is deliberately
-not restated here. Two owners for one rule is how they diverge.
+Ownership boundary: this entry owns **evidence type** — what a claim of "verified"
+must deliver. **Cadence** is out of scope for a project standard on purpose: how
+much verification to spend mid-slice, and when to batch small edits into one gate
+run, is a working rhythm of whoever is doing the work, not a property of the code.
+Silence here means out of scope, not permission to verify per keystroke.
 
 ## Browser test scope: only what we control, and no test-shape quotas (2026-09-16)
 
