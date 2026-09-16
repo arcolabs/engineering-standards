@@ -1,6 +1,6 @@
 # ADR 0004 — Defer vision-model GUI automation; add no browser tooling to L1
 
-- Status: proposed (awaiting Kai's approval — not self-approved)
+- Status: accepted (Kai, 2026-09-16)
 - Date: 2026-09-16
 - Supersedes: none
 
